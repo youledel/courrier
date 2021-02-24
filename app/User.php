@@ -10,13 +10,23 @@ class User extends \TCG\Voyager\Models\User
 {
     use Notifiable;
 
+    // les 4 roles 
+
+    const USER_ROLE='operateur';
+    const ADMIN_ROLE='admin';
+    const BOSS_ROLE='boss';
+    const CHEF_ROLE='chef';
+
+
+
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password','role'
     ];
 
     /**
